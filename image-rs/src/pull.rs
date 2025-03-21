@@ -172,6 +172,7 @@ impl<'a> PullClient<'a> {
                 let layer = layer.clone();
                 let decrypt_config = decrypt_config.as_ref().map(|inner| inner.to_string());
                 move || {
+                    println!("decrypt_config: {:?}", decrypt_config);
                     decryptor
                         .get_decrypt_key(&layer, &decrypt_config.as_deref())
                         .context("failed to get decrypt key")
