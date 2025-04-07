@@ -164,6 +164,16 @@ impl Attester for TdxAttester {
             }
         };
 
+        match &cc_eventlog {
+            Some(data) => println!("CC Eventlog: {}", data),
+            None => println!("CC Eventlog: None"),
+        }
+        
+        match &aa_eventlog {
+            Some(data) => println!("AA Eventlog: {}", data),
+            None => println!("AA Eventlog: None"),
+        }
+
         let evidence = TdxEvidence {
             cc_eventlog,
             quote,
