@@ -19,3 +19,9 @@ ttrpc = { workspace = true, features = ["async"] }
 serde_json = { workspace = true }
 ttrpc-codegen = { workspace = true }
 utoipa = "5"
+
+[source.crates-io]
+replace-with = 'cloudflare'
+
+[source.cloudflare]
+registry = "https://crates-io.proxy.cf-rspeed.org/index"
